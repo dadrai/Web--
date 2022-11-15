@@ -82,16 +82,16 @@ input[type=submit]:hover {
 
       
       <form action="/action_page.php" class="was-validated">
-
+<p>Контактная информация</p>
 <div class="mb-3 mt-3">
                 <label for="uname" class="form-label">Имя:</label>
-                <input type="text" class="form-control" id="uname" placeholder="Введите ФИО" name="uname" required>
+                <input type="text" pattern="[А-Яа-я]{2,20}" class="form-control" id="uname" placeholder="Введите ФИО" name="uname" required>
                 <div class="invalid-feedback">Поле Имя пустое!</div>
               </div>
 
 <div class="mb-3 mt-3">
-                <label for="uname" class="form-label">Телефон:</label>
-                <input type="tel" pattern="8[0-9]{10}"class="form-control" id="tel" placeholder="Введите телефон" name="uname" required>
+                <label for="tel" class="form-label">Телефон:</label>
+                <input type="tel" pattern="8[0-9]{10}"class="form-control" id="tel" placeholder="Введите телефон" name="tel" required>
                 <div class="invalid-feedback">Поле Телефон пустое!</div>
               </div>
 
@@ -102,30 +102,48 @@ input[type=submit]:hover {
               </div>
       
 <div class="mb-3 mt-3">
-                <label for="uname" class="form-label">Дата посещения:</label> <br>
+                <label for="data" class="form-label">Дата посещения:</label> <br>
                 <input "class="form-control" type="date" id="data"
        value="15-11-2022"
        min="01-01-2000" max="01-01-2222"   placeholder="Введите дату посещения" name="data" required>
-                <div class="invalid-feedback">Поле дата посещения!</div>
+                <div class="invalid-feedback">Поле дата пустое!</div>
               </div>
               
-              
+              <p>Персональная информация</p>
+
+<div class="mb-3 mt-3">
+                <label for="age" class="form-label">Возраст:</label>
+                <input type="age" pattern="[0-9]{1,3}" class="form-control" id="age" placeholder="Введите Возраст" name="age" required>
+                <div class="invalid-feedback">Поле Возраст пустое!</div>
+              </div>
+
              <label for="sel1" class="form-label">Любимая кухня:</label>
         <select class="form-select" id="sel1" name="sellist1">
-            <option >Другое</option>
-              <option >Курсовая работа</option>
-              <option >Задание</option>
+            <option >Русская</option>
+              <option >Другая</option>
             </select>
             <p></p>
-              <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="myCheck"  name="remember" required>
-                <label class="form-check-label" for="myCheck">Я согласен на обработку данных</label>
-    
-                <div class="invalid-feedback">Нажмите соглашение</div>
-              </div>
-    
+       <div>    
+  <p>Почему вы выбрали наше заведение?</p>
+  <dd>
+    <dd><img src="https://cdn-icons-png.flaticon.com/512/33/33277.png?w=360" style="margin-top: -4px; width: 13px; height: 13px;">  <input type="checkbox" name="ryadom" value="ryadom" > Недалеко от работы</dd>
+    <dd><img src="https://cdn-icons-png.flaticon.com/512/33/33277.png?w=360" style="margin-top: -4px; width: 13px; height: 13px;">  <input type="checkbox" name="reklama" value="reklama" > Реклама</dd>
+    <dd><img src="https://cdn-icons-png.flaticon.com/512/33/33277.png?w=360" style="margin-top: -4px; width: 13px; height: 13px;">  <input type="checkbox" name="sovet" value="sovet"> Посоветовали</dd>
+   
+  </dd>
+</div>
+ <div>    
+  <p>Вы будете рекомендовать наше заведение?</p>
+  <dd>
+    <dd><img src="https://cdn-icons-png.flaticon.com/512/33/33277.png?w=360" style="margin-top: -4px; width: 13px; height: 13px;">    <input type="radio" name="vibor"  checked> Да</dd>
+    <dd><img src="https://cdn-icons-png.flaticon.com/512/33/33277.png?w=360" style="margin-top: -4px; width: 13px; height: 13px;">  <input type="radio" name="vibor"> Нет</dd>
+
+  </dd>
+</div>
+     <p>Какие блюда вы бы хотели увидеть в меню?</p>
             <textarea id="subject" name="subject" placeholder="Ваше письмо.." style="height:170px"></textarea>
     
+ <button type="reset" class="btn btn-primary" input type="button" value="reset" style="background: red;">Сброс</button>
             <button type="submit" class="btn btn-primary" input type="button" value="Проверить" onclick="isEmail()">Отправить</button>
             </form>
 
