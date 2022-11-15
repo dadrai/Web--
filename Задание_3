@@ -54,22 +54,6 @@ input[type=submit]:hover {
 
 
 
-<script>
-  function isEmail() {
-  
-   var str = document.getElementById("email").value;
-   var status = document.getElementById("status");
-   document.getElementById("status").style.color = 'red';
-   var re = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
-   if (re.test(str)) {status.innerHTML = ""}
-     else status.innerHTML = "Адрес неверный";
-   if(isEmpty(str)) status.innerHTML = "Поле пустое";
-  }
-  function isEmpty(str){
-   return (str == null) || (str.length == 0);
-  }
- </script>
-
 </head>
 <body>
 
@@ -98,7 +82,7 @@ input[type=submit]:hover {
 
       <div class="mb-3 mt-3">
       <p>E-mail:</p>
-       <p><input type="text" class="form-control" id="email" placeholder="Введите Email" name="email" required> 
+       <p><input type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" id="email" placeholder="Введите Email" name="email" required> 
               </div>
       
 <div class="mb-3 mt-3">
@@ -126,9 +110,9 @@ input[type=submit]:hover {
        <div>    
   <p>Почему вы выбрали наше заведение?</p>
   <dd>
-    <dd><img src="https://cdn-icons-png.flaticon.com/512/33/33277.png?w=360" style="margin-top: -4px; width: 13px; height: 13px;">  <input type="checkbox" name="ryadom" value="ryadom" > Недалеко от работы</dd>
-    <dd><img src="https://cdn-icons-png.flaticon.com/512/33/33277.png?w=360" style="margin-top: -4px; width: 13px; height: 13px;">  <input type="checkbox" name="reklama" value="reklama" > Реклама</dd>
-    <dd><img src="https://cdn-icons-png.flaticon.com/512/33/33277.png?w=360" style="margin-top: -4px; width: 13px; height: 13px;">  <input type="checkbox" name="sovet" value="sovet"> Посоветовали</dd>
+    <dd><img src="https://cdn-icons-png.flaticon.com/512/33/33277.png?w=360" style="margin-top: -4px; width: 13px; height: 13px;">  <input type="checkbox" name="ryadom" " > Недалеко от работы</dd>
+    <dd><img src="https://cdn-icons-png.flaticon.com/512/33/33277.png?w=360" style="margin-top: -4px; width: 13px; height: 13px;">  <input type="checkbox" name="reklama" " > Реклама</dd>
+    <dd><img src="https://cdn-icons-png.flaticon.com/512/33/33277.png?w=360" style="margin-top: -4px; width: 13px; height: 13px;">  <input type="checkbox" name="sovet" "> Посоветовали</dd>
    
   </dd>
 </div>
@@ -144,7 +128,7 @@ input[type=submit]:hover {
             <textarea id="subject" name="subject" placeholder="Ваше письмо.." style="height:170px"></textarea>
     
  <button type="reset" class="btn btn-primary" input type="button" value="reset" style="background: red;">Сброс</button>
-            <button type="submit" class="btn btn-primary" input type="button" value="Проверить" onclick="isEmail()">Отправить</button>
+            <button type="submit" class="btn btn-primary" input type="button"">Отправить</button>
             </form>
 
         
