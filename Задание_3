@@ -20,17 +20,6 @@ body {
 }
 
 
-.header {
-    padding: 30px;
-    font-size: 40px;
-    text-align: center;
-    background: white;
-}
-
-
-
-
-
 .card {
      background-color: white;
      padding: 50px 200px;
@@ -38,59 +27,6 @@ body {
 }
 
 
-
-
-
-.icon-bar {
-    width: 100%;
-    background-color: #0f1226;
-    overflow: auto;
-}
-
-
-.icon-bar a {
-    float: right;
-    width: 15%;
-    text-align: center;
-    padding: 20px 0;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 20px;
-text-decoration: none;
-}
-
-
-.icon-bar a:hover {
-    background-color: #171d54;
-}
-
-.active {
-    background-color: #171d54; 
-}
-
-.column {
-    float: left;
-    padding: 30px;
-    height: auto; /* Should be removed. Only for demonstration */
-}
-
-.left {
-  width: 40%;
-}
-
-.right {
-  width: 60%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-/* Style inputs */
 input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
@@ -111,16 +47,6 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #45a049;
 }
-
-/* Style the container/contact section */
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 10px;
-}
-
-
-
 
 
 </style>
